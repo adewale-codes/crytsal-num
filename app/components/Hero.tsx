@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container mx-auto p-6 md:px-20 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="max-w-xl">
           <p className="uppercase tracking-widest text-sm mb-4 text-gray-300">
-            Welcome to Pixoto World
+            Welcome to Crystal Num
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-gray-100">
             We are a digital <br /> videography house

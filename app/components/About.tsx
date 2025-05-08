@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div className="p-5 md:p-20">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div>
-          <div className="flex items-center justify-center border-2 p-5 rounded-t-full rounded-b-full">
+        <div className="">
+          <div className="flex items-center justify-center border p-5 rounded-t-full rounded-b-full">
             <Image
               src="/a1.jpg"
               alt="Photographer"
@@ -16,7 +16,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="w-full">
           <p className="uppercase text-sm text-gray-400 mb-2">About me</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             We’re the leading photo studio in the country
