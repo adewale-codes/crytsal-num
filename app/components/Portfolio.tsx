@@ -12,7 +12,7 @@ interface Album {
 const albums: Album[] = [
   {
     title: "Life in Focus",
-    image: "/portfolio/1.jpg",
+    image: "/d4.jpg",
     href: "/portfolio/life-in-focus",
     tags: [
       {
@@ -47,7 +47,7 @@ const albums: Album[] = [
   },
   {
     title: "Faces of the World",
-    image: "/portfolio/2.jpg",
+    image: "/d1.jpeg",
     href: "/portfolio/faces-of-the-world",
     tags: [
       {
@@ -82,7 +82,7 @@ const albums: Album[] = [
   },
   {
     title: "Essence of Nature",
-    image: "/portfolio/3.jpg",
+    image: "/d2.jpg",
     href: "/portfolio/essence-of-nature",
     tags: [
       {
@@ -117,7 +117,7 @@ const albums: Album[] = [
   },
   {
     title: "Reflections of Life",
-    image: "/portfolio/4.jpg",
+    image: "/d3.jpg",
     href: "/portfolio/reflections-of-life",
     tags: [
       {

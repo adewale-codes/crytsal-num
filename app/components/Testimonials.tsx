@@ -13,14 +13,14 @@ const data: Testimonial[] = [
   {
     name: "Tammy Powell",
     role: "Photo Viewer",
-    image: "/testimonials/tammy.jpg",      // ← put your image here
+    image: "/a1.jpg",      // ← put your image here
     quote:
       "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
   },
   {
     name: "Mark Johnson",
     role: "Professional Photographer",
-    image: "/testimonials/mark.jpg",      // ← another image
+    image: "/a1.jpg",      // ← another image
     quote:
       "Working with Pixoto Studio was a game-changer. Their attention to detail, creativity, and professionalism made every shot perfect. Highly recommended!",
   },
@@ -42,8 +42,8 @@ const Testimonials: FC = () => {
             <Image
               src={image}
               alt={name}
-              fill
-              style={{ objectFit: "cover" }}
+              width={500}
+              height={500}
               priority
             />
           </div>

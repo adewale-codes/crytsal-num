@@ -22,14 +22,14 @@ const otherPages = [
 
 const Footer: FC = () => (
   <footer className="bg-[#1A2835] text-gray-300">
-    <div className="container mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+    <div className="container mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
       {/* LOGO + DESC + SOCIAL */}
       <div className="space-y-6">
         <h2 className="text-3xl font-bold text-white">Pixoto</h2>
         <p>
           There are many variations passag of Lorem Ipsum available but the
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           {[
             { icon: "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" }, // home placeholder
             { icon: "M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9 9 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.5 0-4.51 2.04-4.51 4.55 0 .36.04.71.12 1.04A12.8 12.8 0 0 1 1.64.9a4.52 4.52 0 0 0-.61 2.29 4.56 4.56 0 0 0 2 3.8 4.5 4.5 0 0 1-2.05-.56v.06C2 10.21 4 12.2 6.56 12.49a4.52 4.52 0 0 1-2.03.08A4.53 4.53 0 0 0 8.29 16a9.1 9.1 0 0 1-5.63 1.94A9.28 9.28 0 0 1 0 17.88a12.8 12.8 0 0 0 6.92 2" }, // twitter placeholder
@@ -52,12 +52,12 @@ const Footer: FC = () => (
         </div>
         <p className="mt-6 text-sm">
           • Powered by{" "}
-          <span className="font-semibold text-white">Webflow</span>
+          <span className="font-semibold text-white">Adecodes</span>
         </p>
       </div>
 
       {/* NAV COLUMNS */}
-      <div>
+      <div className="w-full">
         <h3 className="uppercase font-semibold mb-4 text-white">Pages</h3>
         <ul className="space-y-2">
           {pages.map((p) => (
@@ -72,7 +72,7 @@ const Footer: FC = () => (
           ))}
         </ul>
       </div>
-      <div>
+      <div className="w-full">
         <h3 className="uppercase font-semibold mb-4 text-white">
           Other Pages
         </h3>
@@ -88,27 +88,6 @@ const Footer: FC = () => (
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* SUBSCRIBE */}
-      <div>
-        <h3 className="uppercase font-semibold mb-4 text-white">Subscribe</h3>
-        <p className="mb-4 text-sm">
-          There are many variations passag of Lorem Ipsum available.
-        </p>
-        <form className="flex flex-col sm:flex-row gap-4">
-          <input
-            type="email"
-            placeholder="Your Email Address"
-            className="flex-1 px-4 py-3 rounded-lg focus:outline-none text-[#1A2835]"
-          />
-          <button
-            type="submit"
-            className="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-[#1A2835] transition"
-          >
-            Subscribe
-          </button>
-        </form>
       </div>
     </div>
 

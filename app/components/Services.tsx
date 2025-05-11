@@ -1,3 +1,5 @@
+// components/Services.tsx
+import Image from "next/image";
 import Link from "next/link";
 
 const services = [
@@ -6,55 +8,21 @@ const services = [
     description:
       "Our photography packages vary depending on the type of service you require.",
     href: "/services/photography",
-    icon: (
-      <svg
-        className="w-12 h-12"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 .19 1.65 1.65 0 0 1-1.51 0 1.65 1.65 0 0 0-1-.19 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-.19-1 1.65 1.65 0 0 1 0-1.51 1.65 1.65 0 0 0 .19-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-.19 1.65 1.65 0 0 1 1.51 0 1.65 1.65 0 0 0 1 .19h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 .19 1 1.65 1.65 0 0 1 0 1.51 1.65 1.65 0 0 0-.19 1z" />
-      </svg>
-    ),
+    icon: "/i1.svg",
   },
   {
     title: "Videography",
     description:
-      "Our photography packages vary depending on the type of service you require.",
+      "Our videography packages vary depending on the type of service you require.",
     href: "/services/videography",
-    icon: (
-      <svg
-        className="w-12 h-12"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path d="M23 7l-7 5 7 5V7z" />
-        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-        <circle cx="8" cy="12" r="1" />
-      </svg>
-    ),
+    icon: "/i2.svg",
   },
   {
     title: "Aerial Photography",
     description:
-      "Our photography packages vary depending on the type of service you require.",
+      "Our aerial photography packages vary depending on the type of service you require.",
     href: "/services/aerial",
-    icon: (
-      <svg
-        className="w-12 h-12"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
-        <path d="M12 11v10m4-8l4-4m-8 0L8 3m8 4l4 4M4 7l4 4" />
-      </svg>
-    ),
+    icon: "/i3.svg",
   },
 ];
 
@@ -70,10 +38,11 @@ export default function Services() {
               I have the experience to make of your photo
             </h2>
           </div>
-          <Link href="/services">
-            <div className="bg-white text-[#1A2835] px-6 py-3 rounded shadow hover:bg-gray-100 transition">
-              All Services &rarr;
-            </div>
+          <Link
+            href="/services"
+            className="bg-white text-[#1A2835] px-6 py-3 rounded shadow hover:bg-gray-100 transition"
+          >
+            All Services &rarr;
           </Link>
         </div>
 
@@ -81,19 +50,27 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-3 border border-transparent md:border-gray-700">
           {services.map((s, i) => (
             <div
-              key={i}
+              key={s.title}
               className={`
                 p-8
                 ${i < services.length - 1 ? "md:border-r md:border-gray-700" : ""}
               `}
             >
-              <div className="mb-6">{s.icon}</div>
+              <div className="mb-6">
+                <Image
+                  src={s.icon}
+                  alt={`${s.title} icon`}
+                  width={48}
+                  height={48}
+                />
+              </div>
               <h3 className="text-2xl font-semibold mb-4">{s.title}</h3>
               <p className="text-gray-300 mb-6">{s.description}</p>
-              <Link href={s.href}>
-                <div className="inline-flex items-center font-medium">
-                  Read More &rarr;
-                </div>
+              <Link
+                href={s.href}
+                className="inline-flex items-center font-medium hover:underline"
+              >
+                Read More &rarr;
               </Link>
             </div>
           ))}

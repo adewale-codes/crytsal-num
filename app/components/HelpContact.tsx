@@ -7,7 +7,7 @@ const HelpContact: FC = () => {
       {/* Background image + dark overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/help-bg.jpg"
+          src="/e1.jpg"
           alt="Camera gear"
           fill
           style={{ objectFit: "cover" }}
